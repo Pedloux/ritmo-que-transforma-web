@@ -17,7 +17,7 @@ const Hero = () => {
           alt="Casal dançando cercado por roda de samba em casamento intimista"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-hero"></div>
+      <div className="absolute inset-0 bg-gradient-hero opacity-[0.45]"></div>
       </div>
 
       {/* Conteúdo Principal */}
