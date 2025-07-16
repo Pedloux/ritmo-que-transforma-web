@@ -1,26 +1,22 @@
 import Hero from "@/components/Hero";
-import ClientLogos from "@/components/ClientLogos";
-import ValueProposition from "@/components/ValueProposition";
 import BigNumbers from "@/components/BigNumbers";
-import Portfolio from "@/components/Portfolio";
-import Testimonial from "@/components/Testimonial";
-import ServicesMatrix from "@/components/ServicesMatrix";
+import PartyPackages from "@/components/PartyPackages";
+import PartyGallery from "@/components/PartyGallery";
+import ValueProposition from "@/components/ValueProposition";
 import FAQ from "@/components/FAQ";
-import ContactForm from "@/components/ContactForm";
+import ContactFormB2C from "@/components/ContactFormB2C";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Hero />
-      <ClientLogos />
-      <ValueProposition />
       <BigNumbers />
-      <Portfolio />
-      <Testimonial />
-      <ServicesMatrix />
+      <PartyPackages />
+      <PartyGallery />
+      <ValueProposition />
       <FAQ />
-      <ContactForm />
+      <ContactFormB2C />
       <Footer />
     </div>
   );

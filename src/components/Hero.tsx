@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Play, ArrowDown } from "lucide-react";
-import heroImage from "@/assets/hero-team-building.jpg";
+import heroImage from "@/assets/wedding-samba-circle.jpg";
 
 const Hero = () => {
   const scrollToForm = () => {
-    const formElement = document.getElementById('cotacao');
+    const formElement = document.getElementById('orcamento');
     formElement?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
-          alt="Equipe corporativa tocando instrumentos musicais em atividade de team building"
+          alt="Casal dançando cercado por roda de samba em casamento intimista"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero"></div>
@@ -26,21 +26,21 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
             <Play className="w-4 h-4" />
-            <span className="text-sm font-medium">Ritmo que Transforma Resultados</span>
+            <span className="text-sm font-medium">Cada Batida, Uma Memória</span>
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Transformamos eventos corporativos em{" "}
+            O Samba que Transforma sua Festa em{" "}
             <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-              experiências inesquecíveis
+              Lembrança Inesquecível
             </span>
           </h1>
 
           {/* Sub-headline */}
           <p className="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed max-w-3xl mx-auto">
-            Team Building musical, shows e dinâmicas vivenciais que unem pessoas 
-            e impulsionam cultura organizacional com ritmo, emoção e alta performance.
+            Banda, bateria e energia autêntica para casamentos, bodas e festas exclusivas. 
+            Transformamos momentos especiais em memórias que duram para sempre.
           </p>
 
           {/* CTAs */}
@@ -51,11 +51,11 @@ const Hero = () => {
               onClick={scrollToForm}
               className="min-w-[200px]"
             >
-              Solicitar Proposta
+              Pedir Orçamento
             </Button>
             <Button variant="outline" size="lg" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-foreground">
               <Play className="w-5 h-5 mr-2" />
-              Ver em Ação
+              Ver Playlist de Casamento
             </Button>
           </div>
 
@@ -68,12 +68,12 @@ const Hero = () => {
             <div className="hidden sm:block w-px h-6 bg-white/30"></div>
             <div className="flex items-center gap-2">
               <span className="text-2xl font-bold text-yellow-300">1500+</span>
-              <span>eventos realizados</span>
+              <span>festas realizadas</span>
             </div>
             <div className="hidden sm:block w-px h-6 bg-white/30"></div>
             <div className="flex items-center gap-2">
               <span className="text-2xl font-bold text-yellow-300">98%</span>
-              <span>de aprovação</span>
+              <span>convidados encantados</span>
             </div>
           </div>
         </div>

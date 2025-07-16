@@ -4,27 +4,27 @@ const FAQ = () => {
   const faqs = [
     {
       question: "E se o espaço for pequeno?",
-      answer: "Adaptamos instrumentos de percussão leve e usamos arranjos silenciosos para caber em auditórios a partir de 30 m². Nossa metodologia funciona tanto em salas de reunião quanto em grandes convenções."
+      answer: "Adaptamos com nossa versão pocket usando instrumentos leves e portáteis. Conseguimos fazer apresentações incríveis em espaços a partir de 30m². A energia do samba se adapta a qualquer ambiente!"
     },
     {
-      question: "Como medir o ROI de uma atividade musical?",
-      answer: "Oferecemos métricas objetivas: pesquisas de clima antes/depois, indicadores de engajamento, redução de turnover e melhoria na comunicação interna. Nossos clientes relatam em média 40% de melhoria nos índices de satisfação."
+      question: "O barulho pode incomodar os vizinhos?",
+      answer: "Trabalhamos com volume controlado e rider técnico flexível. Nossa experiência nos permite criar a energia perfeita sem incomodar. Temos protocolos específicos para diferentes horários e locais."
     },
     {
-      question: "O barulho pode incomodar?",
-      answer: "Utilizamos instrumentos com volume controlado e técnicas de harmonia que criam som envolvente, não invasivo. Temos protocolos específicos para ambientes corporativos e horários de trabalho."
+      question: "Vocês viajam para outras cidades?",
+      answer: "Sim! Atendemos em todo o Brasil. A logística de viagem já está inclusa no orçamento, sem surpresas. Já levamos nossa alegria para mais de 15 estados."
     },
     {
-      question: "Qual a logística necessária?",
-      answer: "Levamos todos os instrumentos e equipamentos. Só precisamos de energia elétrica e espaço para os participantes se movimentarem. Nossa equipe cuida de montagem, execução e desmontagem completa."
+      question: "Qual o investimento para minha festa?",
+      answer: "O valor varia conforme o pacote escolhido, número de convidados e duração. Temos opções a partir de R$ 3.500 para eventos menores. Fazemos orçamento personalizado sem compromisso."
     },
     {
-      question: "Qual o investimento?",
-      answer: "O investimento varia conforme número de participantes, duração e formato da experiência. Temos opções a partir de R$ 150 por pessoa. Oferecemos proposta personalizada sem compromisso."
+      question: "Posso escolher o repertório?",
+      answer: "Claro! Montamos playlist personalizada combinando seus pedidos especiais com nosso repertório de sucessos. Desde clássicos do samba até hits que fazem todo mundo cantar junto."
     },
     {
-      question: "Fazem eventos internacionais?",
-      answer: "Sim! Já realizamos experiências em mais de 15 países. Nossa metodologia transcende barreiras culturais e linguísticas, sendo especialmente eficaz em equipes multiculturais."
+      question: "Preciso fornecer som e equipamentos?",
+      answer: "Não se preocupe! Levamos tudo: instrumentos, som, microfones e até iluminação básica. Você só precisa nos indicar o local e garantir energia elétrica. Simples assim!"
     }
   ];
 
@@ -41,7 +41,7 @@ const FAQ = () => {
               </span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Esclarecemos as principais dúvidas sobre nossas experiências musicais
+              Esclarecemos as principais dúvidas sobre shows para festas e casamentos
             </p>
           </div>
 
@@ -71,14 +71,14 @@ const FAQ = () => {
               </h3>
               <p className="text-white/90 mb-6">
                 Nossa equipe está pronta para esclarecer qualquer questão e ajudar 
-                você a escolher a melhor experiência para sua empresa.
+                você a escolher o pacote perfeito para sua festa.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors duration-300">
                   Falar com Especialista
                 </button>
                 <button className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-300">
-                  Baixar FAQ Completo
+                  Ver Mais Vídeos
                 </button>
               </div>
             </div>

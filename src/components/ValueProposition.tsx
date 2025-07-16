@@ -4,18 +4,18 @@ const ValueProposition = () => {
   const values = [
     {
       icon: Users,
-      title: "Pertencimento Instantâneo",
-      description: "Quebra barreiras e cria conexões autênticas em minutos, fortalecendo o senso de equipe."
+      title: "Alegria Contagiante",
+      description: "Criamos um ambiente de pura felicidade onde todos se sentem parte de algo especial e único."
     },
     {
       icon: Target,
-      title: "Trabalho em Equipe",
-      description: "Desenvolve colaboração natural através da música, alinhando objetivos coletivos."
+      title: "Energia Autêntica",
+      description: "Samba genuíno que desperta emoções verdadeiras e conecta pessoas de todas as idades."
     },
     {
       icon: BookOpen,
-      title: "Aprendizado Vivencial",
-      description: "Experiência emocional que fixa valores e comportamentos de forma duradoura."
+      title: "Memórias Eternas",
+      description: "Momentos que ficam gravados no coração para sempre, criando histórias que serão contadas por gerações."
     }
   ];
 
@@ -25,14 +25,14 @@ const ValueProposition = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Nossa Metodologia{" "}
+            Por que escolher o{" "}
             <span className="bg-gradient-brand bg-clip-text text-transparent">
-              Proprietária
+              Apito de Mestre?
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Integramos música, emoção e aprendizado para criar experiências que 
-            transformam equipes em verdadeiras orquestras organizacionais.
+            Transformamos festas em experiências emocionantes que seus convidados 
+            vão lembrar para sempre, com autenticidade e alegria genuína.
           </p>
         </div>
 
@@ -67,12 +67,12 @@ const ValueProposition = () => {
         <div className="mt-16 text-center">
           <div className="bg-gradient-card border border-border rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4 text-foreground">
-              Como Funciona Nosso Método
+              O Segredo da Nossa Magia
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Em poucos minutos, transformamos grupos diversos em uma bateria harmonizada. 
-              Cada participante encontra seu ritmo único enquanto contribui para o som coletivo, 
-              espelhando perfeitamente a dinâmica de uma equipe de alta performance.
+              Cada show é único e personalizado para sua festa. Combinamos repertório especial, 
+              interação genuína com os convidados e toda energia do samba autêntico para criar 
+              momentos que ninguém esquece. É música, é emoção, é celebração da vida!
             </p>
           </div>
         </div>
