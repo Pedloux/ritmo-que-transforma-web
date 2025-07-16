@@ -58,17 +58,16 @@ const PartyGallery = () => {
         </div>
 
         {/* Gallery Carousel */}
-        <div className="max-w-4xl mx-auto">
-          <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl">
+        <div className="w-full flex justify-center">
+          <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl flex justify-center w-full max-w-xs"> {/* max-w-xs = 20rem */}
             {/* Video Container - Formato 9:16 */}
-            <div className="relative w-full" style={{ paddingBottom: '177.78%' }}> {/* 9:16 aspect ratio */}
+            <div className="relative w-full mx-auto" style={{ paddingBottom: '177.78%' }}> {/* 9:16 aspect ratio */}
               <iframe
                 className="absolute inset-0 w-full h-full"
                 src={galleryItems[currentIndex].src}
                 style={{ border: 'none' }}
                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
                 allowFullScreen
-                
               />
             </div>
 

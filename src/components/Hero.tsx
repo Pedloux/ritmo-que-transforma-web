@@ -31,9 +31,9 @@ const Hero = () => {
 
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            O Samba que Transforma sua Festa em{" "}
+            Transforme sua Festa em{" "}
             <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-              Lembrança Inesquecível
+              Uma lembrança Inesquecível
             </span>
           </h1>
 
