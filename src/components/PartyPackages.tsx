@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Play, Users, Music, Clock } from "lucide-react";
-import sambaShowImage from "@/assets/premium-samba-show.jpg";
-import percussionImage from "@/assets/percussion-closeup.jpg";
-import workshopImage from "@/assets/interactive-workshop.jpg";
+import sambaShowImage from "@/../public/Imagens/AM-LP17(Laranja).png";
+import percussionImage from "@/../public/Imagens/AM-LP22.png";
+import workshopImage from "@/../public/Imagens/AM-LP24(Laranja).png";
 
 const PartyPackages = () => {
   const packages = [
@@ -20,26 +20,26 @@ const PartyPackages = () => {
       cta: "Ver Playlist de Casamento"
     },
     {
-      title: "Bateria Escola de Samba",
+      title: "Shows Intimistas",
       image: percussionImage,
-      duration: "60-90 minutos",
+      duration: "120 minutos",
       icon: Users,
       benefits: [
-        "25 ritmistas profissionais",
-        "Cortejo de entrada épico",
-        "Energia contagiante na pista"
+        "Repertório montado junto com o cliente",
+        "Estética sofisticada e ambientação premium",
+        "Diversos estilos musicais (MPB, pop, Black Music...)"
       ],
       cta: "Ver Playlist de Casamento"
     },
     {
-      title: "Experiência Interativa",
+      title: "Boteco em casa",
       image: workshopImage,
-      duration: "45 minutos",
+      duration: "120 minutos",
       icon: Play,
       benefits: [
-        "Oficina rápida para convidados",
-        "Todos aprendem e tocam juntos",
-        "Momento único e inesquecível"
+        "Roda de samba em casa",
+        "Clima de bar",
+        "Alto nível de personalização"
       ],
       cta: "Ver Playlist de Casamento"
     }

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Play, ArrowDown } from "lucide-react";
-import heroImage from "@/assets/wedding-samba-circle.jpg";
+import heroImage from "@/../public/Imagens/AM-LP23(Laranja).png";
 
 const Hero = () => {
   const scrollToForm = () => {
