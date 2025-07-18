@@ -81,7 +81,7 @@ const ContactFormB2C = () => {
                     <Phone className="w-5 h-5 text-yellow-300" />
                     <div>
                       <p className="text-white font-medium">(11) 94763-3483</p>
-                      <p className="text-white/80 text-sm">WhatsApp 24h</p>
+                      <p className="text-white/80 text-sm">WhatsApp</p>
                     </div>
                   </div>
                   
