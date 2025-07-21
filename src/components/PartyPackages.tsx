@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Play, Users, Music, Clock } from "lucide-react";
-import sambaShowImage from "@/../public/Imagens/AM-LP17(Laranja).png";
-import percussionImage from "@/../public/Imagens/AM-LP22.png";
-import workshopImage from "@/../public/Imagens/AM-LP24(Laranja).png";
+import sambaShowImage from "@/../public/Imagens/AM-LP17(Laranja)-menor.png";
+import percussionImage from "@/../public/Imagens/AM-LP22-menor.png";
+import workshopImage from "@/../public/Imagens/AM-LP24(Laranja)-menor.png";
 
 const PartyPackages = () => {
   const packages = [
