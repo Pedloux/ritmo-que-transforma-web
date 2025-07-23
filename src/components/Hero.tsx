@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Play, ArrowDown } from "lucide-react";
-import heroImage from "@/../public/Imagens/AM-LP23(Laranja).png";
+import heroImage from "@/../public/Imagens/AM-LP23-1000px.png";
 
 const Hero = () => {
   const scrollToForm = () => {
@@ -52,10 +52,6 @@ const Hero = () => {
               className="min-w-[200px]"
             >
               Pedir Orçamento
-            </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-foreground">
-              <Play className="w-5 h-5 mr-2" />
-              Ver Playlist de Casamento
             </Button>
           </div>
 
