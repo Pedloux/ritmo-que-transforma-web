@@ -14,6 +14,24 @@ const Footer = () => {
   const scrollToSection = (href: string) => {
     if (href === '#hero') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (href === '#party-gallery') {
+      // Scroll to the section with heading 'Galeria de momentos únicos'
+      const heading = Array.from(document.querySelectorAll('h2, h1, h3')).find(
+        el => el.textContent?.trim().toLowerCase() === 'galeria de momentos únicos'
+      );
+      heading?.scrollIntoView({ behavior: 'smooth' });
+    } else if (href === '#party-packages') {
+      // Scroll to the section with heading 'pacotes que fazem sua festa brilhar'
+      const heading = Array.from(document.querySelectorAll('h2, h1, h3')).find(
+        el => el.textContent?.trim().toLowerCase() === 'pacotes que fazem sua festa brilhar'
+      );
+      heading?.scrollIntoView({ behavior: 'smooth' });
+    } else if (href === '#perguntas-frequentes') {
+      // Scroll to the section with heading 'perguntas frequentes'
+      const heading = Array.from(document.querySelectorAll('h2, h1, h3')).find(
+        el => el.textContent?.trim().toLowerCase() === 'perguntas frequentes'
+      );
+      heading?.scrollIntoView({ behavior: 'smooth' });
     } else {
       const element = document.querySelector(href);
       element?.scrollIntoView({ behavior: 'smooth' });
