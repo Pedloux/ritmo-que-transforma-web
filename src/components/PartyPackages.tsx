@@ -148,7 +148,14 @@ const PartyPackages = () => {
           <p className="text-lg text-muted-foreground mb-4">
             Precisa de algo personalizado? Criamos experiências sob medida.
           </p>
-          <Button size="lg" className="bg-gradient-brand text-white hover:shadow-hover transition-all duration-300">
+          <Button
+            size="lg"
+            className="bg-gradient-brand text-white hover:shadow-hover transition-all duration-300"
+            onClick={() => {
+              const element = document.querySelector('#orcamento');
+              element?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             Falar com Especialista
           </Button>
         </div>
