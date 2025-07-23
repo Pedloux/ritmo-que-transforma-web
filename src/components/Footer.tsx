@@ -108,7 +108,7 @@ const Footer = () => {
           <Button 
             variant="secondary" 
             size="lg"
-            onClick={() => scrollToSection('#cotacao')}
+            onClick={() => scrollToSection('#orcamento')}
             className="bg-white text-primary hover:bg-white/90"
           >
             Solicitar Proposta Gratuita
