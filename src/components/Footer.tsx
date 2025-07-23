@@ -152,7 +152,7 @@ const Footer = () => {
               © 2024 Apito de Mestre®. Todos os direitos reservados.
             </p>
             <p className="text-white/40 text-xs mt-1">
-              CNPJ: 00.000.000/0001-00 | Desenvolvido com ❤️ e muita música
+              CNPJ: 12.401.276/0001-60 | Desenvolvido com ❤️ e muita música
             </p>
           </div>
         </div>
