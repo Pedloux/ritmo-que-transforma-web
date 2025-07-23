@@ -99,11 +99,11 @@ const Footer = () => {
         {/* CTA Section */}
         <div className="bg-gradient-brand rounded-2xl p-8 mb-12 text-center">
           <h3 className="text-2xl font-bold mb-4">
-            Pronto para Transformar sua Equipe?
+            Pronto para Transformar seu Evento?
           </h3>
           <p className="text-white/90 mb-6 max-w-2xl mx-auto">
             Solicite uma proposta personalizada e descubra como a música pode 
-            fortalecer a cultura da sua organização.
+            transformar sua festa em um evento memorável.
           </p>
           <Button 
             variant="secondary" 
@@ -119,23 +119,29 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/20">
           <div className="flex items-center gap-6 mb-4 md:mb-0">
             <a 
-              href="#" 
+              href="https://www.instagram.com/apitodemestre/" 
               className="text-white/60 hover:text-white transition-colors duration-300"
               aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Instagram className="w-6 h-6" />
             </a>
             <a 
-              href="#" 
+              href="https://www.linkedin.com/company/apito-de-mestre-entretenimento/" 
               className="text-white/60 hover:text-white transition-colors duration-300"
               aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a 
-              href="#" 
+              href="https://www.youtube.com/@ApitodeMestre/videos" 
               className="text-white/60 hover:text-white transition-colors duration-300"
               aria-label="YouTube"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Youtube className="w-6 h-6" />
             </a>
