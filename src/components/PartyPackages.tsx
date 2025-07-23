@@ -102,10 +102,42 @@ const PartyPackages = () => {
                 </ul>
 
                 {/* CTA */}
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                  <Play className="w-4 h-4 mr-2" />
-                  {pkg.cta}
-                </Button>
+                {pkg.title === "Shows Intimistas" ? (
+                  <a
+                    href="https://www.youtube.com/watch?v=PBhAj8y5JSc&list=PLeC6NGv0qCklDcqpZwRrslXFs5iiJVscH"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                      Veja nossa playlist acústica
+                    </Button>
+                  </a>
+                ) : pkg.title === "Boteco em casa" ? (
+                  <a
+                    href="https://www.youtube.com/watch?v=f1ID1bQNqpU&list=PLeC6NGv0qCkm2pk2hoo-YOmnMyPDj9_Nd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                      Veja a playlist de boteco
+                    </Button>
+                  </a>
+                ) : pkg.title === "Show Samba Premium" ? (
+                  <a
+                    href="https://www.youtube.com/watch?v=vQ6mNl_L12k&list=PLeC6NGv0qCkm3k9GJj1LaZdx_-zUufihz&index=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                      Veja a playlist de samba
+                    </Button>
+                  </a>
+                ) : (
+                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                    <Play className="w-4 h-4 mr-2" />
+                    {pkg.cta}
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}
