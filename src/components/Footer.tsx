@@ -4,11 +4,11 @@ import mestreLogo from "/lovable-uploads/6ad80a4b-fee0-44ae-aae5-9a4c4ed43f9e.pn
 
 const Footer = () => {
   const navigation = [
-    { name: "Sobre", href: "#sobre" },
-    { name: "Portfólio", href: "#portfolio" },
-    { name: "Depoimentos", href: "#depoimentos" },
-    { name: "FAQ", href: "#faq" },
-    { name: "Contato", href: "#cotacao" }
+    { name: "Sobre", href: "#hero" },
+    { name: "Portfólio", href: "#party-gallery" },
+    { name: "Pacotes", href: "#party-packages" },
+    { name: "FAQ", href: "#perguntas-frequentes" },
+    { name: "Contato", href: "#orcamento" }
   ];
 
   const scrollToSection = (href: string) => {
