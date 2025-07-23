@@ -74,10 +74,19 @@ const FAQ = () => {
                 você a escolher o pacote perfeito para sua festa.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors duration-300">
+                <button
+                  className="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors duration-300"
+                  onClick={() => {
+                    const element = document.querySelector('#orcamento');
+                    element?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Falar com Especialista
                 </button>
-                <button className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-300">
+                <button
+                  className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-300"
+                  onClick={() => window.open('https://www.youtube.com/@ApitodeMestre', '_blank')}
+                >
                   Ver Mais Vídeos
                 </button>
               </div>
