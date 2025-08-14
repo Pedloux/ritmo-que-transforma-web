@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -9,6 +9,7 @@ import { Send, Phone } from "lucide-react";
 
 const ContactFormB2C = () => {
   const { toast } = useToast();
+
   const [formData, setFormData] = useState({
     nome: "",
     convidados: "",
@@ -17,30 +18,132 @@ const ContactFormB2C = () => {
     dataEvento: "",
     cidade: "",
     tipoFesta: "",
-    mensagem: ""
+    mensagem: "",
+    utm_source: "",
+    utm_medium: "",
+    utm_campaign: "",
+    utm_term: "",
+    utm_content: "",
+    fbp: "",
+    fbc: "",
+    gclid: "",
+    ga: "",
+    referrer: "",
+    pageUrl: "",
+    userAgent: "",
+    fbclid: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+
+
+  // Função para pegar cookies
+  function getCookie(name: string) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop()?.split(';').shift() || "";
+    return "";
+  }
+
+  // Preencher campos de rastreamento ao montar
+  useEffect(() => {
+    // Função para extrair parâmetros UTM e outros do URL
+    const getTrackingFields = () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      return {
+        utm_source: urlParams.get("utm_source") || "",
+        utm_medium: urlParams.get("utm_medium") || "",
+        utm_campaign: urlParams.get("utm_campaign") || "",
+        utm_term: urlParams.get("utm_term") || "",
+        utm_content: urlParams.get("utm_content") || "",
+        gclid: urlParams.get("gclid") || "",
+        fbclid: urlParams.get("fbclid") || "",
+        fbp: getCookie("_fbp") || "",
+        fbc: getCookie("_fbc") || "",
+        ga: getCookie("_ga") || "",
+        referrer: document.referrer || "",
+        pageUrl: window.location.href,
+        userAgent: navigator.userAgent || ""
+      };
+    };
+    const tracking = getTrackingFields();
+    setFormData((prev) => ({ ...prev, ...tracking }));
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Orçamento Solicitado! 🎵",
-      description: "Entraremos em contato em até 2 horas úteis com seu orçamento personalizado.",
-    });
-    
-    // Reset form
-    setFormData({
-      nome: "",
-      convidados: "",
-      email: "",
-      whatsapp: "",
-      dataEvento: "",
-      cidade: "",
-      tipoFesta: "",
-      mensagem: ""
-    });
+    // Montar objeto para envio
+    const payload = {
+      ...formData,
+      utm: {
+        utm_source: formData.utm_source,
+        utm_medium: formData.utm_medium,
+        utm_campaign: formData.utm_campaign,
+        utm_term: formData.utm_term,
+        utm_content: formData.utm_content,
+      },
+    };
+    try {
+      await fetch("https://webhook-n8n.grupovorp.com/webhook/apito-de-mestre", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      toast({
+        title: "Orçamento Solicitado! 🎵",
+        description: "Entraremos em contato em até 2 horas úteis com seu orçamento personalizado.",
+      });
+      setFormData({
+        nome: "",
+        convidados: "",
+        email: "",
+        whatsapp: "",
+        dataEvento: "",
+        cidade: "",
+        tipoFesta: "",
+        mensagem: "",
+        utm_source: "",
+        utm_medium: "",
+        utm_campaign: "",
+        utm_term: "",
+        utm_content: "",
+        fbp: "",
+        fbc: "",
+        gclid: "",
+        ga: "",
+        referrer: "",
+        pageUrl: "",
+        userAgent: "",
+        fbclid: ""
+      });
+    } catch (err) {
+      toast({
+        title: "Erro ao enviar",
+        description: "Tente novamente em instantes.",
+        variant: "destructive",
+      });
+    }
   };
 
+  // Máscara de telefone para formatos com ou sem nono dígito
+  function formatPhone(value: string) {
+    // Remove tudo que não for número
+    value = value.replace(/\D/g, "");
+    if (value.length <= 10) {
+      // (11) 9999-9999
+      return value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3').replace(/-$/, "");
+    } else {
+      // (11) 99999-9999
+      return value.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3').replace(/-$/, "");
+    }
+  }
+
   const handleChange = (field: string, value: string) => {
+    if (field === "whatsapp") {
+      value = formatPhone(value);
+    }
+    if (field === "convidados") {
+      value = value.replace(/\D/g, ""); // Remove tudo que não for número
+    }
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
@@ -141,8 +244,11 @@ const ContactFormB2C = () => {
                       id="convidados"
                       value={formData.convidados}
                       onChange={(e) => handleChange("convidados", e.target.value)}
-                      placeholder="Ex: 80 pessoas"
+                      placeholder="Ex: 80"
                       required
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                      maxLength={5}
                     />
                   </div>
 
@@ -166,6 +272,8 @@ const ContactFormB2C = () => {
                       onChange={(e) => handleChange("whatsapp", e.target.value)}
                       placeholder="(11) 99999-9999"
                       required
+                      maxLength={15}
+                      inputMode="tel"
                     />
                   </div>
 
@@ -217,6 +325,22 @@ const ContactFormB2C = () => {
                     />
                   </div>
                 </div>
+
+
+                {/* Campos ocultos para rastreamento */}
+                <input type="hidden" name="utm_source" value={formData.utm_source} />
+                <input type="hidden" name="utm_medium" value={formData.utm_medium} />
+                <input type="hidden" name="utm_campaign" value={formData.utm_campaign} />
+                <input type="hidden" name="utm_term" value={formData.utm_term} />
+                <input type="hidden" name="utm_content" value={formData.utm_content} />
+                <input type="hidden" name="fbp" value={formData.fbp} />
+                <input type="hidden" name="fbc" value={formData.fbc} />
+                <input type="hidden" name="gclid" value={formData.gclid} />
+                <input type="hidden" name="ga" value={formData.ga} />
+                <input type="hidden" name="referrer" value={formData.referrer} />
+                <input type="hidden" name="pageUrl" value={formData.pageUrl} />
+                <input type="hidden" name="userAgent" value={formData.userAgent} />
+                <input type="hidden" name="fbclid" value={formData.fbclid} />
 
                 <Button 
                   type="submit" 
