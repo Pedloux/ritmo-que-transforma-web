@@ -83,7 +83,7 @@ const ContactFormB2C = () => {
       },
     };
     try {
-      await fetch("https://webhook-n8n.grupovorp.com/webhook/apito-de-mestre", {
+      await fetch("https://webhook-n8n.grupovorp.com/webhook/apito-de-mestre-b2c", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
